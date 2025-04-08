@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/Logo.svg'
+import logo from '../assets/Logo.svg';
 
 export const Logo: React.FC = () => {
   return (
@@ -8,12 +8,8 @@ export const Logo: React.FC = () => {
         <img 
           src={logo}
           alt="JK9 Logo" 
-          className="h-12 w-auto"
-        />
-        <div className="text-xs mt-1">
-          <div className="text-right font-arabic">المركز الوطني الأردني للكلاب البوليسية</div>
-          <div>Jordan National K9 Center</div>
-        </div>
+          className="h-12 w-auto bg-gray-500 shadow-md rounded-lg p-3"
+        /> 
       </div>
     </div>
   );
