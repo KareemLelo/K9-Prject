@@ -1,11 +1,12 @@
 import React from 'react';
+import logo from '../assets/Logo.svg'
 
 export const Logo: React.FC = () => {
   return (
     <div className="flex items-center">
       <div className="text-right">
         <img 
-          src="/jk9-logo.png" 
+          src={logo}
           alt="JK9 Logo" 
           className="h-12 w-auto"
         />
