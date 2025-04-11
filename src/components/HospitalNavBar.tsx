@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Logo } from "./Logo";
 
-export const NavBar: React.FC = () => {
+export const HospitalNavBar: React.FC = () => {
   const navigate = useNavigate();
 
   return (
@@ -11,31 +11,7 @@ export const NavBar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex space-x-8">
             <NavLink
-              to="/vet/profile"
-              className={({ isActive }) =>
-                `px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive
-                    ? "bg-gray-500 text-white"
-                    : "text-gray-700 hover:bg-gray-100"
-                }`
-              }
-            >
-              Profile
-            </NavLink>
-            <NavLink
-              to="/vet/new-case"
-              className={({ isActive }) =>
-                `px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive
-                    ? "bg-gray-500 text-white"
-                    : "text-gray-700 hover:bg-gray-100"
-                }`
-              }
-            >
-              New case
-            </NavLink>
-            <NavLink
-              to="/vet/dashboard"
+              to="/hospital/dashboard"
               className={({ isActive }) =>
                 `px-3 py-2 rounded-md text-sm font-medium ${
                   isActive
@@ -47,7 +23,7 @@ export const NavBar: React.FC = () => {
               Dashboard
             </NavLink>
             <NavLink
-              to="/vet/add-case"
+              to="/hospital/pets"
               className={({ isActive }) =>
                 `px-3 py-2 rounded-md text-sm font-medium ${
                   isActive
@@ -56,13 +32,49 @@ export const NavBar: React.FC = () => {
                 }`
               }
             >
-              Add Case
+              Pets
+            </NavLink>
+            <NavLink
+              to="/hospital/vets"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive
+                    ? "bg-gray-500 text-white"
+                    : "text-gray-700 hover:bg-gray-100"
+                }`
+              }
+            >
+              Vets
+            </NavLink>
+            <NavLink
+              to="/hospital/analytics"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive
+                    ? "bg-gray-500 text-white"
+                    : "text-gray-700 hover:bg-gray-100"
+                }`
+              }
+            >
+              Analytics
+            </NavLink>
+            <NavLink
+              to="/hospital/notifications"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive
+                    ? "bg-gray-500 text-white"
+                    : "text-gray-700 hover:bg-gray-100"
+                }`
+              }
+            >
+              Notifications
             </NavLink>
             <button
               onClick={() => navigate("/")}
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100"
             >
-              Log out
+              Logout
             </button>
           </div>
           <Logo />

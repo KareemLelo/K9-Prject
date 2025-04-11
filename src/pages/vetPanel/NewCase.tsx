@@ -1,6 +1,6 @@
-import React, { useCallback } from 'react';
-import { useDropzone } from 'react-dropzone';
-import { Button } from '../components/Button';
+import React, { useCallback } from "react";
+import { useDropzone } from "react-dropzone";
+import { Button } from "../../components/Button";
 
 export const NewCase: React.FC = () => {
   const onDrop = useCallback((acceptedFiles: File[]) => {
@@ -11,9 +11,9 @@ export const NewCase: React.FC = () => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      'image/png': ['.png'],
-      'image/jpeg': ['.jpg', '.jpeg']
-    }
+      "image/png": [".png"],
+      "image/jpeg": [".jpg", ".jpeg"],
+    },
   });
 
   return (
@@ -21,7 +21,12 @@ export const NewCase: React.FC = () => {
       <h1 className="text-2xl font-bold mb-6">New Case</h1>
       <div className="space-y-6">
         <div>
-          <label htmlFor="petName" className="block text-sm font-medium text-gray-700">Pet Name</label>
+          <label
+            htmlFor="petName"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Pet Name
+          </label>
           <input
             type="text"
             id="petName"
@@ -31,7 +36,12 @@ export const NewCase: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="petOwner" className="block text-sm font-medium text-gray-700">Pet Owner</label>
+          <label
+            htmlFor="petOwner"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Pet Owner
+          </label>
           <input
             type="text"
             id="petOwner"
@@ -41,7 +51,12 @@ export const NewCase: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="microchip" className="block text-sm font-medium text-gray-700">Pet Micro Chip (if applicable)</label>
+          <label
+            htmlFor="microchip"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Pet Micro Chip (if applicable)
+          </label>
           <input
             type="text"
             id="microchip"
@@ -51,7 +66,12 @@ export const NewCase: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="caseDetails" className="block text-sm font-medium text-gray-700">Case Details:</label>
+          <label
+            htmlFor="caseDetails"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Case Details:
+          </label>
           <textarea
             id="caseDetails"
             rows={4}
@@ -66,7 +86,9 @@ export const NewCase: React.FC = () => {
             <p className="text-gray-600">Drop files here</p>
             <p className="text-sm text-gray-500">Supported format: PNG, JPG</p>
             <p className="text-gray-500 mt-2">OR</p>
-            <button className="mt-2 text-primary hover:text-primary-dark">Browse files</button>
+            <button className="mt-2 text-primary hover:text-primary-dark">
+              Browse files
+            </button>
           </div>
         </div>
 
